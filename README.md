@@ -34,7 +34,7 @@ Usage: hypercored [key?] [options]
 2. In the project root, run this command:
 
 ```
-docker build -t hypercored:latest . && docker run -d --name=hypercored --restart=always -p 3282:3282 -v ./feeds:/usr/src/app/feeds -v ./archiver:/usrc/src/app/archiver hypercored:latest
+docker build -t hypercored:latest . && docker run -d --name=hypercored --restart=always -p 3282:3282 -v ${PWD}/feeds:/usr/src/app/feeds -v ${PWD}/archiver:/usrc/src/app/archiver hypercored:latest
 ```
 
 **Notes:**  
