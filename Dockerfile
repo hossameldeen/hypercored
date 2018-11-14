@@ -25,4 +25,4 @@ ENV NODE_ENV production
 # Note: you still need to supply -p 3282:3282
 EXPOSE 3282
 
-CMD [ "pm2-runtime", "start", "index.js", "--", "--cwd", "/root/.hypercored", "--port", "3282" ]
+CMD [ "pm2-runtime", "start", "index.js", "--", "--cwd", "/root/.hypercored", "--swarmport", "3282" ]

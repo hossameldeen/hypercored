@@ -23,6 +23,7 @@ Usage: hypercored [key?] [options]
     --websockets  [share over websockets as well]
     --port        [explicit websocket port]
     --no-swarm    [disable swarming]
+    --swarmport   [explicit swarm port]
 ```
 
 ## Docker

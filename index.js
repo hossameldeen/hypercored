@@ -62,7 +62,8 @@ server.on('request', function (req, res) {
 })
 
 if (argv.swarm !== false) {
-  swarm(ar, {live: true}).on('listening', function () {
+  var swarmPort = argv.swarmPort || 3282
+  swarm(ar, {live: true, port: swarmPort}).on('listening', function () {
     console.log('Swarm listening on port %d', this.address().port)
   })
 }
