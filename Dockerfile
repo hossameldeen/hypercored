@@ -23,7 +23,6 @@ COPY . .
 ENV NODE_ENV production
 
 # Note: you still need to supply -p 3282:3282
-# If you have Beaker opened, you may want to change the 3282 port. E.g., to run with -p 9999:3282
 EXPOSE 3282
 
-CMD [ "pm2-runtime", "start", "index.js", "--", "--cwd", "/root/.hypercored" ]
+CMD [ "pm2-runtime", "start", "index.js", "--", "--cwd", "/root/.hypercored", "--port", "3282" ]
