@@ -1,3 +1,5 @@
+**This repository has been archived. For any communication regarding it, including the possibility of unarchiving or making updates to it, feel free to open an issue on [archived-repos](https://github.com/hossameldeen/archived-repos).** This was made for the purpose of (1) adding Docker to [mafintosh/hypercored](https://github.com/mafintosh/hypercored), and (2) allowing the ability to use a different swarm port. I did use it (and am using it at the time of writing), but archiving because I don't know if I'll maintain it in the future. Anyway, if you want to make an enhancement or want to open a PR at mafintosh's repo with these changes, just ping me at the linked repo above.
+
 # hypercored
 
 A daemon that can download and share multiple hypercores and hyperdrives. Supports seeding them to the browser over WebSockets as well.
