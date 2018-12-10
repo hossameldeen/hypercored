@@ -21,8 +21,9 @@ COPY . .
 # See: https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md#environment-variables
 # Note: Only this is applied from the practices.
 ENV NODE_ENV production
+ENV SWARM_PORT 3282
 
 # Note: you still need to supply -p 3282:3282
 EXPOSE 3282
 
-CMD [ "pm2-runtime", "start", "index.js", "--", "--cwd", "/root/.hypercored", "--swarmport", "3282" ]
+CMD pm2-runtime start index.js -- --cwd /root/.hypercored --swarmport $SWARM_PORT

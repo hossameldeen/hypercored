@@ -17,8 +17,9 @@ Note: Seems like you'll need to do it in `sudo` because I've made some wrong dec
 
 **Notes:**  
 1. Not an expert in Docker security or configuration.  
-2. if you have Beaker on the same machine, you may want to change the dat port. To do that, (1) replace `3283` with your port in `Dockerfile`, and (2) Change `-p 3282:3282` in your command with `-p <yourPort>:<yourtPort>`.  
-Just changing `-p 3282:3282` to, e.g., `-p 3283:3282` isn't working, probably because the datproject's signaling server is implemented in some way that requires `hypercored` to know of the real port (just a guess).  
+2. If `3282` port is already taken (e.g., because you have Beaker running on the same machine), you can change the dat port:
+   1. change `-p 3282:3282` in your command with `-p <yourPort>:<yourtPort>`.
+   2. add `-e SWARM_PORT <yourPort>` anywhere before `hypercored:latest` and after `build`. Just changing `-p 3282:3282` to, e.g., `-p 3283:3282` isn't working, probably because the datproject's signaling server is implemented in some way that requires `hypercored` to know of the real port (just a guess).  
 3. To debug the running container:
    - Run `docker ps -a` to see the container running status.  
    - Run `docker logs hypercored` to see the logs.
