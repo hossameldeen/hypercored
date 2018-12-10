@@ -1,34 +1,8 @@
-**This repository has been archived. For any communication regarding it, including the possibility of unarchiving or making updates to it, feel free to open an issue on [archived-repos](https://github.com/hossameldeen/archived-repos).** This was made for the purpose of (1) adding Docker to [mafintosh/hypercored](https://github.com/mafintosh/hypercored), and (2) allowing the ability to use a different swarm port. I did use it (and am using it at the time of writing), but archiving because I don't know if I'll maintain it in the future. Anyway, if you want to make an enhancement or want to open a PR at mafintosh's repo with these changes, just ping me at the linked repo above.
+# hypercored-docker
 
-# hypercored
-
-A daemon that can download and share multiple hypercores and hyperdrives. Supports seeding them to the browser over WebSockets as well.
-Backed by [hypercore-archiver](https://github.com/mafintosh/hypercore-archiver)
-
-```
-npm install -g hypercored
-```
+Using Docker with [mafintosh/hypercored](https://github.com/mafintosh/hypercored). Needed to fork to add `--swarmport`. Unfortunately, that means I'm tied to a specific `hypercored` version and will need to sync manually. Note: I most probably won't, this is just for now.
 
 ## Usage
-
-``` js
-# will watch ./feeds and store data in ./archiver
-hypercored
-```
-
-For more info run
-
-```
-Usage: hypercored [key?] [options]
-
-    --cwd         [folder to run in]
-    --websockets  [share over websockets as well]
-    --port        [explicit websocket port]
-    --no-swarm    [disable swarming]
-    --swarmport   [explicit swarm port]
-```
-
-## Docker
 
 1. Install [Docker](http://docker.com/). If you're on Linux, remember to [configure Docker to start on boot](https://docs.docker.com/install/linux/linux-postinstall/). Don't know of the equivalent for other systems.
 
